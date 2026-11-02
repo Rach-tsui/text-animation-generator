@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Text Animation Generator (hosted)</title>
+<title>Text Animation Generator (Web version)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -678,6 +678,13 @@
   .site-foot p { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
   .cl-link { border: 0; background: none; padding: 0; font: inherit; font-size: 14px; font-weight: 600; color: var(--ink); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
 
+  /* "Web version" label */
+  .web-badge {
+    display: inline-block; margin-left: 8px; padding: 3px 10px; border-radius: 999px; vertical-align: 3px;
+    background: #F87602; color: #1C1205; font-size: 12px; font-weight: 700; letter-spacing: 0; line-height: 1.4;
+  }
+  .web-badge.big { font-size: 16px; padding: 5px 14px; vertical-align: 0.5em; }
+
   /* Footer */
   .style-wrap { margin-top: 8px; }
   .site-foot { padding-top: 8px; padding-bottom: 40px; }
@@ -688,7 +695,7 @@
 
 <header class="ruled">
   <div class="wrap head">
-    <div class="logo">Text Animation Generator</div>
+    <div class="logo">Text Animation Generator <span class="web-badge">Web version</span></div>
     <div class="export-bar" role="group" aria-label="Export">
       <div class="seg compact" id="sizeSeg" role="group" aria-label="GIF size"></div>
       <div class="select-wrap compact" title="Length of the GIF">
@@ -707,8 +714,8 @@
 
 <section class="ruled">
   <div class="wrap hero">
-    <h1>Text Animation Generator</h1>
-    <p>Vidico’s text animation tool. Pick a font, choose an animation style, export it as a GIF.</p>
+    <h1>Text Animation Generator <span class="web-badge big">Web version</span></h1>
+    <p>Vidico’s text animation tool. Pick a font, choose an animation style, export it as a GIF or .mov.</p>
   </div>
 </section>
 
@@ -880,10 +887,10 @@
       <button type="button" class="back-btn" id="clBackBtn">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>Back
       </button>
-      <div class="cl-title"><h2>Changelog</h2><span class="cl-badge">You’re on version 1.2 (hosted)</span></div>
+      <div class="cl-title"><h2>Changelog</h2><span class="cl-badge">You’re on version 1.2 (web)</span></div>
       <div class="cl-tl">
         <section class="cl-ver cl-now">
-          <div class="cl-vh"><span class="cl-vn">v1.2</span><span class="cl-vt">Hosted edition</span><span class="cl-cur">Current</span><span class="cl-vd">2 Nov 2026</span></div>
+          <div class="cl-vh"><span class="cl-vn">v1.2</span><span class="cl-vt">Web version</span><span class="cl-cur">Current</span><span class="cl-vd">2 Nov 2026</span></div>
           <ul>
             <li>MOV export with transparency, straight into Premiere</li>
             <li>Open-licence fonts built in; upload client fonts in your browser</li>
