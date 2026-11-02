@@ -704,7 +704,7 @@
       <div class="select-wrap compact" title="File format">
         <select id="formatSelect" aria-label="Export format">
           <option value="gif">GIF</option>
-          <option value="mov">MOV (transparent)</option>
+          <option value="mov">.mov</option>
         </select>
       </div>
       <button class="pill compact" id="exportBtn" type="button">Export GIF</button>
@@ -795,7 +795,7 @@
       <div class="swatch-set">
         <p id="bgLabel">Background</p>
         <div class="swatches" id="bgSwatches" role="group" aria-labelledby="bgLabel"></div>
-        <p class="export-note" id="clearNote" hidden>Transparent GIFs have crisp letter edges. For smooth edges, export as MOV.</p>
+        <p class="export-note" id="clearNote" hidden>Transparent GIFs have crisp letter edges. For smooth edges, export as .mov.</p>
         <input type="text" class="hex" id="bgHex" spellcheck="false" autocomplete="off" maxlength="7" aria-label="Background colour hex code" placeholder="#003560">
       </div>
     </details>
@@ -3041,8 +3041,8 @@
   var formatSelect = document.getElementById("formatSelect");
   formatSelect.addEventListener("change", function () {
     state.format = formatSelect.value === "mov" ? "mov" : "gif";
-    document.getElementById("exportBtn").textContent = state.format === "mov" ? "Export MOV" : "Export GIF";
-    flash(state.format === "mov" ? "MOV: transparent, for Premiere and After Effects" : "GIF");
+    document.getElementById("exportBtn").textContent = state.format === "mov" ? "Export .mov" : "Export GIF";
+    flash(state.format === "mov" ? ".mov, for Premiere and After Effects" : "GIF");
   });
   var downloadsApi = null;
   var exporting = false;
